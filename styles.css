@@ -1,0 +1,46 @@
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ripple {
+  height: 200px;
+  width: w00px;
+  position: relative;
+}
+.inner1,
+.inner2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 6px solid blue;
+  border-radius: 50%;
+  animation: ripple 1.5s linear infinite;
+}
+
+.inner2 {
+  animation-delay: 0.5s;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  10% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
